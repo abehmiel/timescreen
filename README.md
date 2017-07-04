@@ -1,7 +1,9 @@
-# This is a fork of twitter-scraping by bpb27, 
-# https://github.com/bpb27/twitter_scraping
-# adding functionality from marsam/tweetshot.js - 
-# https://gist.github.com/marsam/82c68c5a42e6f4c97927
+# Timescreen
+
+## This is a fork of twitter-scraping by bpb27, 
+## https://github.com/bpb27/twitter_scraping
+## adding functionality from marsam/tweetshot.js - 
+## https://gist.github.com/marsam/82c68c5a42e6f4c97927
 
 ## Super quick TL;DR for people who know what they're doing
 
