@@ -1,0 +1,4 @@
+.ropeproject/
+api_keys.json
+img/*.png
+data/*
