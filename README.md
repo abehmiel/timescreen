@@ -10,9 +10,9 @@
 0) Copy sample_api_keys.json to api_keys.json and enter your API keys. Scripts require selenium, tweepy, pandas, phantomjs (node), and a webdriver in your $PATH.
 1) edit scrape.py and target a user near the top of the file.
 2) Create a time window in which to store data. Shorter windows work best, a year or less generally works well for most active users. 
-3) Run scrape.py. when finished, choose another date window if desired. (t: ~ seconds per day of activity)
+3) Run scrape.py. when finished, choose another date window if desired. (t: ~2-10 seconds per day of activity)
 4) Run get_metadata.py. (t: ~6 seconds for every 100 tweets) 
-5) Run tweetshot.py. (t: ~ seconds per tweet)
+5) Run tweetshot.py. (t: ~10 seconds per tweet)
 6) CSV data will be in the data/ folder and screenshots will be in img/
 
 ## Twitter Scraper
