@@ -89,7 +89,7 @@ with open(output_file) as json_data:
             "id_str": entry["id_str"],
             "is_retweet": is_retweet(entry),
             "url": "https://www.twitter.com/statuses/"+entry["id_str"],
-            "img_file": "img/"+entry["id_str"]
+            "img_file": "img/"+entry["id_str"]+".png"
         }
         results.append(t)
 
