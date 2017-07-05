@@ -4,6 +4,8 @@ from selenium.common.exceptions import NoSuchElementException, StaleElementRefer
 from time import sleep
 import json
 import datetime
+import os
+import errno
 
 # edit these three variables
 # generally time windows of one year or less tend to work the best
@@ -24,6 +26,18 @@ id_selector = '.time a.tweet-timestamp'
 tweet_selector = 'li.js-stream-item'
 user = user.lower()
 ids = []
+
+def make_sure_path_exists(path):
+    try:
+        os.makedirs(path)
+    except OSError as exception:
+        if exception.errno != errno.EEXIST:
+            raise
+
+
+make_sure_path_exists('data/')
+make_sure_path_exists('img/')
+
 
 def format_day(date):
     day = '0' + str(date.day) if len(str(date.day)) == 1 else str(date.day)

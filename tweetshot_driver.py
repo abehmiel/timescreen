@@ -1,14 +1,13 @@
 import subprocess
 import pandas as pd
 from pathlib import Path
-import scrape
 
-user = scrape.user()
+user = 'realjunsonchan'
 
 df = pd.read_csv("data/{}.csv".format(user))
         
 urls = df["url"].values
-filepath = df["filepath"].values
+filepath = df["img_file"].values
 
 for item in zip(urls, filepath):
     if not Path(item[1]).is_file():

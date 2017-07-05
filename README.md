@@ -8,8 +8,8 @@ This is a fork of twitter-scraping by bpb27, https://github.com/bpb27/twitter_sc
 1) edit scrape.py and choose a 'user' to scrape near the top of the file.
 2) Create a time window in which to store data by editing the 'start' and 'end' variables. Shorter windows work best, a year or less generally works well for most active users. 
 3) Run scrape.py. when finished, choose another date window if desired and run scrape.py again. (t: ~2-10 seconds per day of activity)
-4) Run get_metadata.py. (t: ~6 seconds for every 100 tweets) 
-5) Run tweetshot.py. (t: ~10 seconds per tweet)
+4) Edit the user variable in get_metadata.py, then run get_metadata.py. (t: ~6 seconds for every 100 tweets) 
+5) Edit the user variable in tweetshot_driver.py ,then run tweetshot_driver.py. (t: ~2 seconds per tweet)
 6) CSV data will be in the data/ folder and screenshots will be in img/
 
 ## Twitter Scraper

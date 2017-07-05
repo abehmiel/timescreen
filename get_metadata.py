@@ -4,12 +4,11 @@ import math
 import csv
 import zipfile
 from time import sleep
-import scrape.py
 import os
 import errno
 
 # CHANGE THIS TO THE USER YOU WANT
-user = scrape.user()
+user = 'dril'
 
 with open('api_keys.json') as f:
     keys = json.load(f)
@@ -101,7 +100,7 @@ with open(output_file_short, 'w') as outfile:
 with open(output_file_short) as master_file:
     data = json.load(master_file)
     fields = ["favorite_count", "source", "text", "in_reply_to_screen_name",
-              "is_retweet", "created_at", "retweet_count", "id_str", "url"]
+              "is_retweet", "created_at", "retweet_count", "id_str", "url", "img_file"]
     print('creating CSV version of minimized json master file')
     f = csv.writer(open('data/{}.csv'.format(user), 'w'))
     f.writerow(fields)
