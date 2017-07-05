@@ -4,13 +4,13 @@ This is a fork of twitter-scraping by bpb27, https://github.com/bpb27/twitter_sc
 
 ## Super quick TL;DR for people who know what they're doing
 
-0) Copy sample_api_keys.json to api_keys.json and enter your API keys. Scripts require selenium, tweepy, pandas, phantomjs (node), and a webdriver in your $PATH.
-1) edit scrape.py and choose a 'user' to scrape near the top of the file.
-2) Create a time window in which to store data by editing the 'start' and 'end' variables. Shorter windows work best, a year or less generally works well for most active users. 
-3) Run scrape.py. when finished, choose another date window if desired and run scrape.py again. (t: ~2-10 seconds per day of activity)
-4) Edit the user variable in get_metadata.py, then run get_metadata.py. (t: ~6 seconds for every 100 tweets) 
-5) Edit the user variable in tweetshot_driver.py ,then run tweetshot_driver.py. (t: ~2 seconds per tweet)
-6) CSV data will be in the data/ folder and screenshots will be in img/
+0) Copy `sample_api_keys.json` to `api_keys.json` and enter your API keys. Scripts require `selenium`, `tweepy`, `pandas`, `phantomjs` (node), and a webdriver in your `$PATH`.
+1) edit `scrape.py` and choose a `user` to scrape near the top of the file.
+2) Create a time window in which to store data by editing the `start` and `end` variables. Shorter windows work best, a year or less generally works well for most active users. 
+3) Run `python3 scrape.py`. when finished, choose another date window if desired and run `scrape.py` again. (t: ~2-10 seconds per day of activity)
+4) Edit the user variable in `get_metadata.py`, then run `python3 get_metadata.py`. (t: ~6 seconds for every 100 tweets) 
+5) Edit the user variable in `tweetshot_driver.py`,then run `python3 tweetshot_driver.py`. (t: ~2 seconds per tweet)
+6) CSV data will be in the `data/` folder and screenshots will be in `img/`
 
 ## Twitter Scraper
 
@@ -76,7 +76,8 @@ The `scrape.py` script collects tweet ids. If you know a tweet's id number, you 
 - for this part, you will need pandas, node.js and phantom.js:
   - `pip3 install pandas`
   - `[package-manager on your distro] install nodejs`
-  - npm install -g phantomjs
-- run `python3 tweetshot_driver.py`
-  - the script will collect screenshot of every tweet that has been indexed in the data file. The data file has path information for each image.
-  - there will be one image (~60kb) per tweet. Context will be captured for replies. The option to allow for not capturing this context is under development.
+  - `npm install -g phantomjs`
+- Edit the `user` variable in `tweetshot_driver.py`, then run `python3 tweetshot_driver.py`
+  - the script will collect screenshot of every tweet that has been indexed in the data file, which has path information for each image
+  - expect a little weirdness with embedded videos, especially vines; attached images may not be full-sized
+  - there will be one image (~60kb) per tweet. Context will be captured for replies. The option to allow for not capturing this context is under development
