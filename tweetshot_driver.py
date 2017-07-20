@@ -2,7 +2,7 @@ import subprocess
 import pandas as pd
 from pathlib import Path
 
-user = 'realjunsonchan'
+user = 'dril'
 
 df = pd.read_csv("data/{}.csv".format(user))
         
