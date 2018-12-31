@@ -35,6 +35,7 @@ The `scrape.py` script collects tweet ids. If you know a tweet's id number, you 
   - `pip3 install selenium`
 - tweepy (3.5.0)
   - `pip3 install tweepy`
+- phantomjs (for taking screenshots)
 
 ## Running the scraper
 
