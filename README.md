@@ -78,6 +78,7 @@ The `scrape.py` script collects tweet ids. If you know a tweet's id number, you 
   - `pip3 install pandas`
   - `[package-manager on your distro] install nodejs`
   - `npm install -g phantomjs`
+- Ensure that phantomjs is executable from your path. On awindows machine you may need to copy the executable to the current working directory or create an environment variable that points to phantomjs. On UNIX-based systems you can create a symbolic link to phantomjs in the current working directory if needed.
 - Edit the `user` variable in `tweetshot_driver.py`, then run `python3 tweetshot_driver.py`
   - the script will collect screenshot of every tweet that has been indexed in the data file, which has path information for each image
   - expect a little weirdness with embedded videos, especially vines; attached images may not be full-sized
